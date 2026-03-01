@@ -1,0 +1,129 @@
+@import './colors';
+@import './typography';
+@import './spacing';
+
+// Breakpoints
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 320px;
+
+// Responsive breakpoints
+@mixin tablet {
+  @media (max-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $mobile-max-width) {
+    @content;
+  }
+}
+
+// Typography mixins
+@mixin h1 {
+  font-family: $font-primary;
+  font-size: $h1-size;
+  font-weight: $h1-weight;
+  line-height: $h1-line-height;
+  
+  @include tablet {
+    font-size: $tablet-h1-size;
+  }
+  
+  @include mobile {
+    font-size: $mobile-h1-size;
+  }
+}
+
+@mixin h2 {
+  font-family: $font-primary;
+  font-size: $h2-size;
+  font-weight: $h2-weight;
+  line-height: $h2-line-height;
+  
+  @include tablet {
+    font-size: $tablet-h2-size;
+  }
+  
+  @include mobile {
+    font-size: $mobile-h2-size;
+  }
+}
+
+@mixin h3 {
+  font-family: $font-primary;
+  font-size: $h3-size;
+  font-weight: $h3-weight;
+  line-height: $h3-line-height;
+  
+  @include tablet {
+    font-size: $tablet-h3-size;
+  }
+  
+  @include mobile {
+    font-size: $mobile-h3-size;
+  }
+}
+
+@mixin h4 {
+  font-family: $font-primary;
+  font-size: $h4-size;
+  font-weight: $h4-weight;
+  line-height: $h4-line-height;
+  
+  @include mobile {
+    font-size: $mobile-h4-size;
+  }
+}
+
+@mixin h5 {
+  font-family: $font-primary;
+  font-size: $h5-size;
+  font-weight: $h5-weight;
+  line-height: $h5-line-height;
+}
+
+@mixin h6 {
+  font-family: $font-primary;
+  font-size: $h6-size;
+  font-weight: $h6-weight;
+  line-height: $h6-line-height;
+}
+
+@mixin main-text {
+  font-family: $font-secondary;
+  font-size: $main-text-size;
+  font-weight: $main-text-weight;
+  line-height: $main-text-line-height;
+}
+
+@mixin additional-text {
+  font-family: $font-secondary;
+  font-size: $additional-text-size;
+  font-weight: $additional-text-weight;
+  line-height: $additional-text-line-height;
+}
+
+@mixin button-text {
+  font-family: $font-secondary;
+  font-size: $button-text-size;
+  font-weight: $button-text-weight;
+  line-height: $button-text-line-height;
+}
+
+// Container mixin
+@mixin container {
+  max-width: $desktop-max-width;
+  margin: 0 auto;
+  padding: 0 $desktop-margin;
+  
+  @include tablet {
+    max-width: $tablet-max-width;
+    padding: 0 $tablet-margin;
+  }
+  
+  @include mobile {
+    max-width: 100%;
+    padding: 0 $mobile-margin;
+  }
+}

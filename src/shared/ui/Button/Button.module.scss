@@ -1,0 +1,32 @@
+@import '../../styles/mixins';
+
+.button {
+  @include button-text;
+  height: $button-height;
+  padding: 0 $button-padding-x;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.2s ease;
+  
+  &:hover {
+    opacity: 0.9;
+  }
+  
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.primary {
+  background-color: $color-main;
+  color: $color-white;
+}
+
+.secondary {
+  background-color: transparent;
+  color: $color-main;
+  border: 1px solid $color-main;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}

@@ -1,0 +1,153 @@
+@import '../../shared/styles/mixins';
+
+.footer {
+  position: relative;
+  background-color: $color-bg;
+  padding: 80px 0 40px;
+  
+  @include tablet {
+    padding: 60px 0 32px;
+  }
+  
+  @include mobile {
+    padding: 48px 0 24px;
+  }
+}
+
+.container {
+  @include container;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  margin-bottom: 80px;
+  
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+  }
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionTitle {
+  @include h5;
+  color: $color-white;
+  margin-bottom: 24px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.link {
+  @include main-text;
+  color: $color-white;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+  
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.address {
+  @include main-text;
+  color: $color-white;
+  font-style: normal;
+  line-height: 1.5em;
+}
+
+.schedule {
+  @include main-text;
+  color: $color-white;
+  line-height: 1.5em;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  
+  @include tablet {
+    flex-direction: column;
+    gap: 32px;
+    align-items: flex-start;
+  }
+}
+
+.socialLinks {
+  display: flex;
+  gap: 20px;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease;
+  
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.info {
+  display: flex;
+  gap: 40px;
+  
+  @include mobile {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+.copyright,
+.privacyLink {
+  @include additional-text;
+  color: $color-white;
+}
+
+.privacyLink {
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+  
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.scrollTop {
+  position: absolute;
+  right: $desktop-margin;
+  bottom: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: opacity 0.2s ease;
+  
+  &:hover {
+    opacity: 0.7;
+  }
+  
+  @include tablet {
+    right: $tablet-margin;
+    bottom: 32px;
+  }
+  
+  @include mobile {
+    right: $mobile-margin;
+    bottom: 24px;
+  }
+}

@@ -1,0 +1,89 @@
+@import '../../shared/styles/mixins';
+
+.subscribe {
+  padding: 100px 0;
+  background-color: $color-white;
+  
+  @include tablet {
+    padding: 80px 0;
+  }
+  
+  @include mobile {
+    padding: 60px 0;
+  }
+}
+
+.container {
+  @include container;
+}
+
+.title {
+  @include h3;
+  color: $color-black;
+  margin-bottom: 40px;
+  
+  @include tablet {
+    margin-bottom: 32px;
+  }
+  
+  @include mobile {
+    margin-bottom: 24px;
+  }
+}
+
+.description {
+  @include main-text;
+  color: $color-black;
+  max-width: 570px;
+  margin-bottom: 60px;
+  
+  @include tablet {
+    margin-bottom: 48px;
+  }
+  
+  @include mobile {
+    margin-bottom: 32px;
+  }
+}
+
+.form {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  
+  @include tablet {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+.inputWrapper {
+  flex: 1;
+  max-width: 570px;
+  
+  @include tablet {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.input {
+  @include main-text;
+  width: 100%;
+  padding: 16px 0;
+  border: none;
+  border-bottom: 1px solid $color-black;
+  background-color: transparent;
+  color: $color-black;
+  outline: none;
+  transition: border-color 0.2s ease;
+  
+  &::placeholder {
+    color: $color-black;
+    opacity: 0.5;
+  }
+  
+  &:focus {
+    border-bottom-color: $color-main;
+  }
+}

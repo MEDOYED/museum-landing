@@ -1,0 +1,75 @@
+@import '../../shared/styles/mixins';
+
+.planVisit {
+  position: relative;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  
+  @include tablet {
+    min-height: 500px;
+  }
+  
+  @include mobile {
+    min-height: 400px;
+  }
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  background-color: $color-bg;
+}
+
+.backgroundImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+.container {
+  @include container;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.content {
+  max-width: 570px;
+  
+  @include tablet {
+    max-width: 100%;
+  }
+}
+
+.title {
+  @include h2;
+  color: $color-white;
+  margin-bottom: 40px;
+  
+  @include tablet {
+    margin-bottom: 32px;
+  }
+  
+  @include mobile {
+    margin-bottom: 24px;
+  }
+}
+
+.description {
+  @include main-text;
+  color: $color-white;
+  margin-bottom: 60px;
+  
+  @include tablet {
+    margin-bottom: 48px;
+  }
+  
+  @include mobile {
+    margin-bottom: 32px;
+  }
+}

@@ -1,0 +1,108 @@
+@import '../../shared/styles/mixins';
+
+.hero {
+  position: relative;
+  min-height: 800px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  
+  @include tablet {
+    min-height: 600px;
+  }
+  
+  @include mobile {
+    min-height: 500px;
+  }
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  background-color: $color-bg;
+}
+
+.backgroundImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+.container {
+  @include container;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding-top: $header-height;
+}
+
+.content {
+  max-width: 569px;
+  
+  @include tablet {
+    max-width: 100%;
+  }
+}
+
+.title {
+  @include h1;
+  color: $color-white;
+  margin-bottom: 30px;
+  
+  @include tablet {
+    margin-bottom: 24px;
+  }
+  
+  @include mobile {
+    margin-bottom: 20px;
+  }
+}
+
+.subtitle {
+  @include main-text;
+  color: $color-white;
+  margin-bottom: 16px;
+}
+
+.date {
+  @include additional-text;
+  color: $color-white;
+  margin-bottom: 81px;
+  
+  @include tablet {
+    margin-bottom: 48px;
+  }
+  
+  @include mobile {
+    margin-bottom: 32px;
+  }
+}
+
+.durationBadge {
+  position: absolute;
+  bottom: 62px;
+  right: $desktop-margin;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  
+  @include tablet {
+    display: none;
+  }
+}
+
+.divider {
+  width: 1px;
+  height: 60px;
+  background-color: $color-white;
+  opacity: 0.3;
+}
+
+.duration {
+  @include h6;
+  color: $color-white;
+  opacity: 0.7;
+}
