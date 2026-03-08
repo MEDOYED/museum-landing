@@ -3,7 +3,7 @@
 .footer {
   position: relative;
   background-color: $color-bg;
-  padding: 80px 0 40px;
+  padding: 50px 0 30px;
 
   @include tablet {
     padding: 60px 0 32px;
@@ -22,7 +22,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 60px;
-  margin-bottom: 80px;
+  margin-bottom: 70px;
 
   @include tablet {
     grid-template-columns: 1fr;
@@ -39,13 +39,13 @@
 .sectionTitle {
   @include h5;
   color: $color-white;
-  margin-bottom: 24px;
+  margin-bottom: 30px;
 }
 
 .nav {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 10px;
 }
 
 .link {
@@ -64,6 +64,7 @@
   color: $color-white;
   font-style: normal;
   line-height: 1.5em;
+  margin-bottom: 50px;
 }
 
 .schedule {
@@ -76,7 +77,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 40px;
 
   @include tablet {
     flex-direction: column;
@@ -103,7 +103,7 @@
 
 .info {
   display: flex;
-  gap: 40px;
+  gap: 102px;
 
   @include mobile {
     flex-direction: column;
