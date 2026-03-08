@@ -1,13 +1,13 @@
-@import '../../shared/styles/mixins';
+@import "../../shared/styles/mixins";
 
 .news {
-  padding: 100px 0;
+  margin: 110px 0 200px 0;
   background-color: $color-white;
-  
+
   @include tablet {
     padding: 80px 0;
   }
-  
+
   @include mobile {
     padding: 60px 0;
   }
@@ -17,15 +17,21 @@
   @include container;
 }
 
+.titleWrapper {
+  display: flex;
+  justify-content: space-between;
+  height: fit-content;
+  margin-bottom: 53px;
+}
+
 .title {
   @include h3;
   color: $color-black;
-  margin-bottom: 80px;
-  
+
   @include tablet {
     margin-bottom: 60px;
   }
-  
+
   @include mobile {
     margin-bottom: 40px;
   }
@@ -34,14 +40,13 @@
 .newsGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: $desktop-gutter;
-  margin-bottom: 60px;
-  
+  gap: 32px;
+
   @include tablet {
     grid-template-columns: 1fr;
     gap: 60px;
   }
-  
+
   @include mobile {
     gap: 40px;
   }
@@ -54,8 +59,8 @@
 
 .imageWrapper {
   width: 100%;
-  margin-bottom: 32px;
-  
+  margin-bottom: 20px;
+
   @include mobile {
     margin-bottom: 24px;
   }
@@ -75,13 +80,12 @@
 .newsDate {
   @include additional-text;
   color: $color-black;
-  margin-bottom: 16px;
 }
 
 .newsTitle {
   @include h5;
   color: $color-black;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 .description {
