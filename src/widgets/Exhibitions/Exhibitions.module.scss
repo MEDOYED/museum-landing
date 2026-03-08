@@ -1,13 +1,13 @@
-@import '../../shared/styles/mixins';
+@import "../../shared/styles/mixins";
 
 .exhibitions {
-  padding: 100px 0;
+  padding: 110px 0 200px 0;
   background-color: $color-white;
-  
+
   @include tablet {
     padding: 80px 0;
   }
-  
+
   @include mobile {
     padding: 60px 0;
   }
@@ -17,15 +17,20 @@
   @include container;
 }
 
+.titleWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 .title {
   @include h3;
   color: $color-black;
   margin-bottom: 80px;
-  
+
   @include tablet {
     margin-bottom: 60px;
   }
-  
+
   @include mobile {
     margin-bottom: 40px;
   }
@@ -35,13 +40,12 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: $desktop-gutter;
-  margin-bottom: 60px;
-  
+
   @include tablet {
     grid-template-columns: 1fr;
     gap: 60px;
   }
-  
+
   @include mobile {
     gap: 40px;
   }
@@ -55,7 +59,7 @@
 .imageWrapper {
   width: 100%;
   margin-bottom: 32px;
-  
+
   @include mobile {
     margin-bottom: 24px;
   }
@@ -75,20 +79,20 @@
 .exhibitionDate {
   @include main-text;
   color: $color-main;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
 
 .exhibitionTitle {
   @include h4;
   color: $color-black;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
 .description {
   @include main-text;
   color: $color-gray;
-  margin-bottom: 32px;
-  
+  margin-bottom: 50px;
+
   @include mobile {
     margin-bottom: 24px;
   }
