@@ -77,9 +77,6 @@ export const BurgerMenu: React.FC<BurgerMenuProps> = ({ isOpen, onClose }) => {
           </div>
         </div>
 
-        {/* Divider */}
-        <div className={styles.divider} />
-
         {/* Navigation */}
         <nav className={styles.nav}>
           <a href="#exhibitions" onClick={handleNavClick} className={styles.navItem}>
@@ -92,6 +89,9 @@ export const BurgerMenu: React.FC<BurgerMenuProps> = ({ isOpen, onClose }) => {
             Новини
           </a>
         </nav>
+
+        {/* Divider */}
+        <div className={styles.divider} />
 
         {/* Button */}
         <Button variant="primary">Купити квиток</Button>
