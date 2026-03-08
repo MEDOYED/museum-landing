@@ -20,6 +20,11 @@
 .primary {
   background-color: $color-main;
   color: $color-white;
+
+  @include tablet {
+    height: 60px;
+    width: 330px;
+  }
 }
 
 .secondary {

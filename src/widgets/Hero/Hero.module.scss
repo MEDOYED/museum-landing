@@ -7,9 +7,9 @@
   overflow: hidden;
   background-color: $color-bg;
 
-  // @include tablet {
-  //   min-height: 600px;
-  // }
+  @include tablet {
+    min-height: 1092px;
+  }
 
   // @include mobile {
   //   min-height: 500px;
@@ -23,6 +23,13 @@
   z-index: 0;
   object-position: right;
   max-height: 800px;
+
+  @include tablet {
+    height: 496px;
+    width: 443px;
+    right: 50%;
+    transform: translateX(50%);
+  }
 }
 
 .container {
@@ -47,7 +54,7 @@
   margin-bottom: 30px;
 
   @include tablet {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
 
   @include mobile {
@@ -59,16 +66,16 @@
   @include main-text;
   color: $color-white;
   margin-bottom: 81px;
+
+  @include tablet {
+    margin-bottom: 50px;
+  }
 }
 
 .date {
   @include additional-text;
   color: $color-white;
   margin-bottom: 10px;
-
-  @include tablet {
-    margin-bottom: 48px;
-  }
 
   @include mobile {
     margin-bottom: 32px;
