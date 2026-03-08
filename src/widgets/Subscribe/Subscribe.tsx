@@ -1,8 +1,9 @@
 "use client";
 
-import React, { FormEvent, useState } from "react";
+import React, { FormEvent, useEffect, useState } from "react";
 import { Button } from "@/shared/ui/Button";
 import styles from "./Subscribe.module.scss";
+import { useWindowSize } from "@/shared/lib/useWindowSize";
 
 export const Subscribe: React.FC = () => {
   const [email, setEmail] = useState("");
@@ -13,11 +14,28 @@ export const Subscribe: React.FC = () => {
     console.log("Subscribing email:", email);
   };
 
+  const { windowWidth } = useWindowSize();
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  // const shouldShow = isMounted && windowWidth > 768;
+
   return (
     <section className={styles.subscribe}>
       <div className={styles.container}>
         <form className={styles.form} onSubmit={handleSubmit}>
           <h2 className={styles.title}>Підпишіться на дайджест</h2>
+
+          {isMounted && windowWidth <= 768 && (
+            <p className={styles.description}>
+              Першими дізнавайтесь про новини музею та розіграші, отримуйте запрошення на події та
+              читайте статті від кураторів
+            </p>
+          )}
+
           <div className={styles.inputWrapper}>
             <input
               type="email"
@@ -34,10 +52,12 @@ export const Subscribe: React.FC = () => {
           </Button>
         </form>
 
-        <p className={styles.description}>
-          Першими дізнавайтесь про новини музею та розіграші, отримуйте запрошення на події та
-          читайте статті від кураторів
-        </p>
+        {isMounted && windowWidth > 768 && (
+          <p className={styles.description}>
+            Першими дізнавайтесь про новини музею та розіграші, отримуйте запрошення на події та
+            читайте статті від кураторів
+          </p>
+        )}
       </div>
     </section>
   );
