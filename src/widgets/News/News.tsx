@@ -1,19 +1,32 @@
-import React from "react";
+"use client";
+
+import React, { useState, useEffect } from "react";
+
+import { useWindowSize } from "@/shared/lib/useWindowSize";
 import Image from "next/image";
 import { Button } from "@/shared/ui/Button";
 import styles from "./News.module.scss";
 
 export const News: React.FC = () => {
+  const { windowWidth } = useWindowSize();
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   return (
     <section className={styles.news}>
       <div className={styles.container}>
         <div className={styles.titleWrapper}>
           <h2 className={styles.title}>Новини</h2>
 
-          <Button variant="secondary">
-            Усі новини
-            <Image src="/icons/arrow.svg" alt="" width={20} height={20} />
-          </Button>
+          {isMounted && windowWidth > 320 && (
+            <Button variant="secondary">
+              Усі новини
+              <Image src="/icons/arrow.svg" alt="" width={20} height={20} />
+            </Button>
+          )}
         </div>
 
         <div className={styles.newsGrid}>
