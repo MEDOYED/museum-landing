@@ -29,7 +29,7 @@ export const Subscribe: React.FC = () => {
         <form className={styles.form} onSubmit={handleSubmit}>
           <h2 className={styles.title}>Підпишіться на дайджест</h2>
 
-          {isMounted && windowWidth <= 768 && (
+          {isMounted && windowWidth <= 1280 && (
             <p className={styles.description}>
               Першими дізнавайтесь про новини музею та розіграші, отримуйте запрошення на події та
               читайте статті від кураторів
@@ -52,7 +52,7 @@ export const Subscribe: React.FC = () => {
           </Button>
         </form>
 
-        {isMounted && windowWidth > 768 && (
+        {isMounted && windowWidth > 1280 && (
           <p className={styles.description}>
             Першими дізнавайтесь про новини музею та розіграші, отримуйте запрошення на події та
             читайте статті від кураторів

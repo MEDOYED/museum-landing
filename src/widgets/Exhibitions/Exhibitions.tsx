@@ -19,7 +19,7 @@ export const Exhibitions: React.FC = () => {
         <div className={styles.titleWrapper}>
           <h2 className={styles.title}>Актуальні виставки</h2>
 
-          {isMounted && windowWidth > 320 && (
+          {isMounted && windowWidth > 768 && (
             <Button variant="secondary">
               Архів виставок
               <Image src="/icons/arrow.svg" alt="" width={20} height={20} />
@@ -74,7 +74,7 @@ export const Exhibitions: React.FC = () => {
           </div>
         </div>
 
-        {isMounted && windowWidth <= 320 && (
+        {isMounted && windowWidth <= 768 && (
           <Button variant="secondary">
             Архів виставок
             <Image src="/icons/arrow.svg" alt="" width={20} height={20} />

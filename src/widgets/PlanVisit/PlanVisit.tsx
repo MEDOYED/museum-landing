@@ -15,7 +15,7 @@ export const PlanVisit: React.FC = () => {
     setIsMounted(true);
   }, []);
 
-  const shouldShowImage = isMounted && windowWidth > 768;
+  const shouldShowImage = isMounted && windowWidth > 1280;
 
   return (
     <section className={styles.planVisit}>

@@ -27,7 +27,7 @@ export const Header: React.FC = () => {
             <Image src="/icons/menu.svg" alt="Menu" width={30} height={30} />
           </button>
 
-          {isMounted && windowWidth > 320 && (
+          {isMounted && windowWidth > 768 && (
             <div className={styles.language}>
               <span className={styles.languageText}>UA</span>
               <Image src="/icons/dropdown.svg" alt="Language dropdown" width={10} height={7} />
