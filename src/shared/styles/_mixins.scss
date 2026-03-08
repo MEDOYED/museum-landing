@@ -3,8 +3,8 @@
 @import './spacing';
 
 // Breakpoints
-$breakpoint-tablet: 768px;
-$breakpoint-mobile: 320px;
+$breakpoint-tablet: 1280px;
+$breakpoint-mobile: 768px;
 
 // Responsive breakpoints
 @mixin tablet {

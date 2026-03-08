@@ -20,7 +20,7 @@ export const Events: React.FC = () => {
         <div className={styles.titleWrapper}>
           <h2 className={styles.title}>Найближчі події</h2>
 
-          {isMounted && windowWidth > 320 && (
+          {isMounted && windowWidth > 768 && (
             <Button variant="secondary">
               Календар подій
               <Image src="/icons/arrow.svg" alt="" width={20} height={20} />
