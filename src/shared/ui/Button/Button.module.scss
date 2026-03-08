@@ -25,6 +25,11 @@
     height: 60px;
     width: 330px;
   }
+
+  @include mobile {
+    height: 60px;
+    width: 280px;
+  }
 }
 
 .secondary {
