@@ -5,7 +5,7 @@
   background-color: $color-white;
 
   @include tablet {
-    padding: 80px 0;
+    margin: 110px 0 160px 0;
   }
 
   @include mobile {
@@ -22,15 +22,15 @@
   justify-content: space-between;
   height: fit-content;
   margin-bottom: 53px;
+
+  @include tablet {
+    margin-bottom: 70px;
+  }
 }
 
 .title {
   @include h3;
   color: $color-black;
-
-  @include tablet {
-    margin-bottom: 60px;
-  }
 
   @include mobile {
     margin-bottom: 40px;
@@ -42,10 +42,10 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 32px;
 
-  @include tablet {
-    grid-template-columns: 1fr;
-    gap: 60px;
-  }
+  // @include tablet {
+  //   grid-template-columns: 1fr;
+  //   gap: 60px;
+  // }
 
   @include mobile {
     gap: 40px;
@@ -60,6 +60,9 @@
 .imageWrapper {
   width: 100%;
   margin-bottom: 20px;
+  min-height: 320px;
+  object-fit: cover;
+  object-position: center;
 
   @include mobile {
     margin-bottom: 24px;
@@ -70,6 +73,9 @@
   width: 100%;
   height: auto;
   display: block;
+  min-height: 320px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .content {
