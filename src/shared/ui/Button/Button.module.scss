@@ -35,4 +35,9 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
+
+  @include tablet {
+    height: 60px;
+    width: 210px;
+  }
 }

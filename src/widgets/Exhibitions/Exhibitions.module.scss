@@ -5,7 +5,7 @@
   background-color: $color-white;
 
   @include tablet {
-    padding: 80px 0;
+    padding: 100px 0 160px 0;
   }
 
   @include mobile {
@@ -20,16 +20,12 @@
 .titleWrapper {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 70px;
 }
 
 .title {
   @include h3;
   color: $color-black;
-  margin-bottom: 80px;
-
-  @include tablet {
-    margin-bottom: 60px;
-  }
 
   @include mobile {
     margin-bottom: 40px;
@@ -41,10 +37,10 @@
   grid-template-columns: repeat(2, 1fr);
   gap: $desktop-gutter;
 
-  @include tablet {
-    grid-template-columns: 1fr;
-    gap: 60px;
-  }
+  // @include tablet {
+  //   grid-template-columns: 1fr;
+  //   gap: 60px;
+  // }
 
   @include mobile {
     gap: 40px;
@@ -54,6 +50,7 @@
 .exhibition {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .imageWrapper {
@@ -74,6 +71,7 @@
 .content {
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 
 .exhibitionDate {
@@ -92,6 +90,11 @@
   @include main-text;
   color: $color-gray;
   margin-bottom: 50px;
+  margin-top: auto;
+
+  @include tablet {
+    margin-bottom: 40px;
+  }
 
   @include mobile {
     margin-bottom: 24px;
