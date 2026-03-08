@@ -1,34 +1,42 @@
-@import '../../shared/styles/mixins';
+@import "../../shared/styles/mixins";
 
 .hero {
   position: relative;
-  min-height: 800px;
+  height: 800px;
   display: flex;
-  align-items: center;
   overflow: hidden;
-  
-  @include tablet {
-    min-height: 600px;
-  }
-  
-  @include mobile {
-    min-height: 500px;
-  }
-}
-
-.background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 0;
   background-color: $color-bg;
+
+  @include tablet {
+    min-height: 1092px;
+  }
+
+  @include mobile {
+    min-height: 747px;
+  }
 }
 
 .backgroundImage {
-  object-fit: cover;
-  object-position: center;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  object-position: right;
+  max-height: 800px;
+
+  @include tablet {
+    height: 496px;
+    width: 443px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  @include mobile {
+    height: 273px;
+    width: 245px;
+    right: 50%;
+    transform: translateX(50%);
+  }
 }
 
 .container {
@@ -36,12 +44,16 @@
   position: relative;
   z-index: 1;
   width: 100%;
-  padding-top: $header-height;
+  padding-top: 180px;
+
+  @include mobile {
+    padding-top: 130px;
+  }
 }
 
 .content {
-  max-width: 569px;
-  
+  max-width: 572px;
+
   @include tablet {
     max-width: 100%;
   }
@@ -51,52 +63,51 @@
   @include h1;
   color: $color-white;
   margin-bottom: 30px;
-  
+
   @include tablet {
-    margin-bottom: 24px;
-  }
-  
-  @include mobile {
     margin-bottom: 20px;
+  }
+
+  @include mobile {
+    margin-bottom: 30px;
   }
 }
 
 .subtitle {
   @include main-text;
   color: $color-white;
-  margin-bottom: 16px;
+  margin-bottom: 81px;
+
+  @include tablet {
+    margin-bottom: 50px;
+  }
+
+  @include mobile {
+    margin-bottom: 40px;
+  }
 }
 
 .date {
   @include additional-text;
   color: $color-white;
-  margin-bottom: 81px;
-  
-  @include tablet {
-    margin-bottom: 48px;
-  }
-  
-  @include mobile {
-    margin-bottom: 32px;
-  }
+  margin-bottom: 10px;
 }
 
 .durationBadge {
-  position: absolute;
-  bottom: 62px;
-  right: $desktop-margin;
+  margin-top: 135px;
+  margin-bottom: 50px;
   display: flex;
   align-items: center;
-  gap: 16px;
-  
+  gap: 20px;
+
   @include tablet {
     display: none;
   }
 }
 
 .divider {
-  width: 1px;
-  height: 60px;
+  height: 1px;
+  width: 472px;
   background-color: $color-white;
   opacity: 0.3;
 }

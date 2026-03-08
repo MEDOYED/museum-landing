@@ -1,14 +1,32 @@
-import React from 'react';
-import Image from 'next/image';
-import { Button } from '@/shared/ui/Button';
-import styles from './Exhibitions.module.scss';
+"use client";
+
+import React, { useEffect, useState } from "react";
+import Image from "next/image";
+import { Button } from "@/shared/ui/Button";
+import styles from "./Exhibitions.module.scss";
+import { useWindowSize } from "@/shared/lib/useWindowSize";
 
 export const Exhibitions: React.FC = () => {
+  const { windowWidth } = useWindowSize();
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
   return (
     <section className={styles.exhibitions}>
       <div className={styles.container}>
-        <h2 className={styles.title}>Актуальні виставки</h2>
-        
+        <div className={styles.titleWrapper}>
+          <h2 className={styles.title}>Актуальні виставки</h2>
+
+          {isMounted && windowWidth > 320 && (
+            <Button variant="secondary">
+              Архів виставок
+              <Image src="/icons/arrow.svg" alt="" width={20} height={20} />
+            </Button>
+          )}
+        </div>
+
         <div className={styles.exhibitionsGrid}>
           {/* Exhibition 1 */}
           <div className={styles.exhibition}>
@@ -21,20 +39,18 @@ export const Exhibitions: React.FC = () => {
                 className={styles.image}
               />
             </div>
-            
+
             <div className={styles.content}>
               <p className={styles.exhibitionDate}>11.07 - 22.09</p>
-              <h3 className={styles.exhibitionTitle}>
-                Кураторська виставка "Ангели"
-              </h3>
+              <h3 className={styles.exhibitionTitle}>Кураторська виставка "Ангели"</h3>
               <p className={styles.description}>
-                Виставковий проект «Ангели» – знакова подія для української
-                культури і водночас наймасштабніший...
+                Виставковий проект «Ангели» – знакова подія для української культури і водночас
+                наймасштабніший...
               </p>
               <Button variant="primary">Купити квиток</Button>
             </div>
           </div>
-          
+
           {/* Exhibition 2 */}
           <div className={styles.exhibition}>
             <div className={styles.imageWrapper}>
@@ -46,32 +62,24 @@ export const Exhibitions: React.FC = () => {
                 className={styles.image}
               />
             </div>
-            
+
             <div className={styles.content}>
               <p className={styles.exhibitionDate}>Діє постійно</p>
-              <h3 className={styles.exhibitionTitle}>
-                Мистецтво ХХ ст. — XXI ст.
-              </h3>
+              <h3 className={styles.exhibitionTitle}>Мистецтво ХХ ст. — XXI ст.</h3>
               <p className={styles.description}>
-                Знакові роботи Алли Горської, Миколи Самокиша, Федора
-                Кричевського та інших митців.
+                Знакові роботи Алли Горської, Миколи Самокиша, Федора Кричевського та інших митців.
               </p>
               <Button variant="primary">Купити квиток</Button>
             </div>
           </div>
         </div>
-        
-        <div className={styles.archiveButtonWrapper}>
+
+        {isMounted && windowWidth <= 320 && (
           <Button variant="secondary">
             Архів виставок
-            <Image
-              src="/icons/arrow.svg"
-              alt=""
-              width={20}
-              height={20}
-            />
+            <Image src="/icons/arrow.svg" alt="" width={20} height={20} />
           </Button>
-        </div>
+        )}
       </div>
     </section>
   );

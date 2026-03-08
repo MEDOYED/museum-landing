@@ -1,16 +1,12 @@
-@import '../../shared/styles/mixins';
+@import "../../shared/styles/mixins";
 
 .footer {
   position: relative;
   background-color: $color-bg;
-  padding: 80px 0 40px;
-  
-  @include tablet {
-    padding: 60px 0 32px;
-  }
-  
+  padding: 50px 0 30px;
+
   @include mobile {
-    padding: 48px 0 24px;
+    padding: 34px 0 30px;
   }
 }
 
@@ -22,12 +18,11 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 60px;
-  margin-bottom: 80px;
-  
-  @include tablet {
+  margin-bottom: 70px;
+
+  @include mobile {
     grid-template-columns: 1fr;
-    gap: 40px;
-    margin-bottom: 60px;
+    gap: 50px;
   }
 }
 
@@ -39,13 +34,13 @@
 .sectionTitle {
   @include h5;
   color: $color-white;
-  margin-bottom: 24px;
+  margin-bottom: 30px;
 }
 
 .nav {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 10px;
 }
 
 .link {
@@ -53,7 +48,7 @@
   color: $color-white;
   text-decoration: none;
   transition: opacity 0.2s ease;
-  
+
   &:hover {
     opacity: 0.7;
   }
@@ -64,6 +59,11 @@
   color: $color-white;
   font-style: normal;
   line-height: 1.5em;
+  margin-bottom: 50px;
+
+  @include mobile {
+    margin-bottom: 30px;
+  }
 }
 
 .schedule {
@@ -76,9 +76,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 40px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  
+
   @include tablet {
     flex-direction: column;
     gap: 32px;
@@ -96,7 +94,7 @@
   align-items: center;
   justify-content: center;
   transition: opacity 0.2s ease;
-  
+
   &:hover {
     opacity: 0.7;
   }
@@ -104,8 +102,12 @@
 
 .info {
   display: flex;
-  gap: 40px;
-  
+  gap: 102px;
+
+  @include tablet {
+    gap: 22px;
+  }
+
   @include mobile {
     flex-direction: column;
     gap: 16px;
@@ -121,7 +123,7 @@
 .privacyLink {
   text-decoration: none;
   transition: opacity 0.2s ease;
-  
+
   &:hover {
     opacity: 0.7;
   }
@@ -136,16 +138,16 @@
   cursor: pointer;
   padding: 0;
   transition: opacity 0.2s ease;
-  
+
   &:hover {
     opacity: 0.7;
   }
-  
+
   @include tablet {
     right: $tablet-margin;
     bottom: 32px;
   }
-  
+
   @include mobile {
     right: $mobile-margin;
     bottom: 24px;
