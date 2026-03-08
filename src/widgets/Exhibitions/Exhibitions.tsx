@@ -73,6 +73,13 @@ export const Exhibitions: React.FC = () => {
             </div>
           </div>
         </div>
+
+        {isMounted && windowWidth <= 320 && (
+          <Button variant="secondary">
+            Архів виставок
+            <Image src="/icons/arrow.svg" alt="" width={20} height={20} />
+          </Button>
+        )}
       </div>
     </section>
   );

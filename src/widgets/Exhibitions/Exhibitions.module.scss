@@ -37,13 +37,10 @@
   grid-template-columns: repeat(2, 1fr);
   gap: $desktop-gutter;
 
-  // @include tablet {
-  //   grid-template-columns: 1fr;
-  //   gap: 60px;
-  // }
-
   @include mobile {
-    gap: 40px;
+    grid-template-columns: 1fr;
+    gap: 60px;
+    margin-bottom: 30px;
   }
 }
 

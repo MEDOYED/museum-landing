@@ -45,4 +45,9 @@
     height: 60px;
     width: 210px;
   }
+
+  @include mobile {
+    height: 60px;
+    width: 280px;
+  }
 }
