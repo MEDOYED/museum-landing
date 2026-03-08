@@ -9,7 +9,7 @@
   }
 
   @include mobile {
-    padding: 60px 0;
+    padding: 90px 0 120px 0;
   }
 }
 
@@ -21,15 +21,15 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 70px;
+
+  @include mobile {
+    margin-bottom: 60px;
+  }
 }
 
 .title {
   @include h3;
   color: $color-black;
-
-  @include mobile {
-    margin-bottom: 40px;
-  }
 }
 
 .exhibitionsGrid {
@@ -58,7 +58,7 @@
   margin-bottom: 32px;
 
   @include mobile {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
 }
 
@@ -97,7 +97,7 @@
   }
 
   @include mobile {
-    margin-bottom: 24px;
+    margin-bottom: 30px;
   }
 }
 
