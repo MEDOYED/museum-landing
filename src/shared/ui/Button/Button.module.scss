@@ -1,17 +1,17 @@
-@import '../../styles/mixins';
+@import "../../styles/mixins";
 
 .button {
   @include button-text;
   height: $button-height;
-  padding: 0 $button-padding-x;
+  width: $button-width;
   cursor: pointer;
   border: none;
   transition: opacity 0.2s ease;
-  
+
   &:hover {
     opacity: 0.9;
   }
-  
+
   &:active {
     opacity: 0.8;
   }
