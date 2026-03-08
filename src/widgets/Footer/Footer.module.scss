@@ -6,7 +6,7 @@
   padding: 50px 0 30px;
 
   @include mobile {
-    padding: 48px 0 24px;
+    padding: 34px 0 30px;
   }
 }
 
@@ -19,6 +19,11 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 60px;
   margin-bottom: 70px;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
 }
 
 .section {
@@ -55,6 +60,10 @@
   font-style: normal;
   line-height: 1.5em;
   margin-bottom: 50px;
+
+  @include mobile {
+    margin-bottom: 30px;
+  }
 }
 
 .schedule {
