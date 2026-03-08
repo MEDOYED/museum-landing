@@ -1,18 +1,33 @@
-import React from "react";
+"use client";
+
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { Button } from "@/shared/ui/Button";
 import styles from "./PlanVisit.module.scss";
 
+import { useWindowSize } from "@/shared/lib/useWindowSize";
+
 export const PlanVisit: React.FC = () => {
+  const { windowWidth } = useWindowSize();
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  const shouldShowImage = isMounted && windowWidth > 768;
+
   return (
     <section className={styles.planVisit}>
-      <Image
-        src="/images/plan-visit.png"
-        alt="Plan your visit"
-        width={578}
-        height={800}
-        className={styles.backgroundImage}
-      />
+      {shouldShowImage && (
+        <Image
+          src="/images/plan-visit.png"
+          alt="Plan your visit"
+          width={578}
+          height={800}
+          className={styles.backgroundImage}
+        />
+      )}
 
       <div className={styles.container}>
         <div className={styles.content}>
