@@ -33,7 +33,12 @@ export const Header: React.FC = () => {
 
           <div className={styles.controls}>
             <button className={styles.menuButton} onClick={toggleMenu}>
-              <Image src="/icons/menu.svg" alt="Menu" width={30} height={30} />
+              <Image 
+                src={isMenuOpen ? "/icons/close.svg" : "/icons/menu.svg"} 
+                alt={isMenuOpen ? "Close" : "Menu"} 
+                width={30} 
+                height={30} 
+              />
             </button>
 
             {isMounted && windowWidth > 768 && (

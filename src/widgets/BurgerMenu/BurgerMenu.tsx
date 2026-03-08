@@ -64,26 +64,6 @@ export const BurgerMenu: React.FC<BurgerMenuProps> = ({ isOpen, onClose }) => {
     <div className={styles.burgerMenu}>
       {/* Content */}
       <div className={styles.content}>
-        {/* Header */}
-        <div className={styles.header}>
-          <Image src="/icons/logo.svg" alt="Museum Logo" width={124} height={37} />
-
-          <div className={styles.headerControls}>
-            {/* Language (тільки для tablet/desktop) */}
-            {isMounted && windowWidth > 768 && (
-              <div className={styles.language}>
-                <span className={styles.languageText}>UA</span>
-                <Image src="/icons/dropdown.svg" alt="Language dropdown" width={10} height={7} />
-              </div>
-            )}
-
-            {/* Close button */}
-            <button onClick={onClose} className={styles.closeButton} aria-label="Close menu">
-              <Image src="/icons/close.svg" alt="Close" width={30} height={30} />
-            </button>
-          </div>
-        </div>
-
         {/* Info Block */}
         <div className={styles.info}>
           <div className={styles.infoItem}>
