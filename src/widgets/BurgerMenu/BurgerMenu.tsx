@@ -64,45 +64,47 @@ export const BurgerMenu: React.FC<BurgerMenuProps> = ({ isOpen, onClose }) => {
     <div className={styles.burgerMenu}>
       {/* Content */}
       <div className={styles.content}>
-        {/* Info Block */}
-        <div className={styles.info}>
-          <div className={styles.infoItem}>
-            <span className={styles.infoLabel}>Розклад сьогодні:</span>
-            <span className={styles.infoValue}>12:00 - 19:00</span>
+        <div className={styles.container}>
+          {/* Info Block */}
+          <div className={styles.info}>
+            <div className={styles.infoItem}>
+              <span className={styles.infoLabel}>Розклад сьогодні:</span>
+              <span className={styles.infoValue}>12:00 - 19:00</span>
+            </div>
+
+            <div className={styles.infoItem}>
+              <span className={styles.infoLabel}>Адреса:</span>
+              <span className={styles.infoValue}>Київ, вул. М. Грушевського, 6</span>
+            </div>
           </div>
 
-          <div className={styles.infoItem}>
-            <span className={styles.infoLabel}>Адреса:</span>
-            <span className={styles.infoValue}>Київ, вул. М. Грушевського, 6</span>
-          </div>
+          {/* Navigation */}
+          <nav className={styles.nav}>
+            <a href="#exhibitions" onClick={handleNavClick} className={styles.navItem}>
+              Актуальні виставки
+            </a>
+            <a href="#events" onClick={handleNavClick} className={styles.navItem}>
+              Найближчі події
+            </a>
+            <a href="#news" onClick={handleNavClick} className={styles.navItem}>
+              Новини
+            </a>
+          </nav>
+
+          {/* Divider */}
+          <div className={styles.divider} />
+
+          {/* Button */}
+          <Button variant="primary">Купити квиток</Button>
+
+          {/* Language (тільки для mobile) */}
+          {isMounted && windowWidth <= 768 && (
+            <div className={styles.languageMobile}>
+              <span className={styles.languageText}>UA</span>
+              <Image src="/icons/dropdown.svg" alt="Language dropdown" width={10} height={7} />
+            </div>
+          )}
         </div>
-
-        {/* Navigation */}
-        <nav className={styles.nav}>
-          <a href="#exhibitions" onClick={handleNavClick} className={styles.navItem}>
-            Актуальні виставки
-          </a>
-          <a href="#events" onClick={handleNavClick} className={styles.navItem}>
-            Найближчі події
-          </a>
-          <a href="#news" onClick={handleNavClick} className={styles.navItem}>
-            Новини
-          </a>
-        </nav>
-
-        {/* Divider */}
-        <div className={styles.divider} />
-
-        {/* Button */}
-        <Button variant="primary">Купити квиток</Button>
-
-        {/* Language (тільки для mobile) */}
-        {isMounted && windowWidth <= 768 && (
-          <div className={styles.languageMobile}>
-            <span className={styles.languageText}>UA</span>
-            <Image src="/icons/dropdown.svg" alt="Language dropdown" width={10} height={7} />
-          </div>
-        )}
 
         {/* Background Image (тільки для tablet/desktop) */}
         {isMounted && windowWidth > 768 && (

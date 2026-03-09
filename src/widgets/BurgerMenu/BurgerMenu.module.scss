@@ -16,16 +16,24 @@
   height: 100vh;
   background-color: $color-bg;
   overflow-y: auto;
-  padding: 107px $mobile-margin 20px;
+  padding-top: 107px;
+  padding-bottom: 20px;
 
   @include tablet {
-    padding: 129px $tablet-margin 39px;
+    padding-top: 129px;
+    padding-bottom: 39px;
   }
 
   @include mobile {
-    padding: 97px $mobile-margin 20px;
+    padding-top: 97px;
+    padding-bottom: 20px;
   }
 }
+
+.container {
+  @include container;
+}
+
 
 // Language
 .languageMobile {
